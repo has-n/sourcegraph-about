@@ -15,7 +15,12 @@ export interface PageProps {
 const CONTENT_PARENT_DIRECTORY = './content/'
 
 const LearnPage: NextPage<PageProps> = ({ post, content }) => {
-    return <div>This is a learn page</div>
+    return <Layout meta={{/* TODO */}}>
+        <article>
+            This is a layout page
+        </article>
+    </Layout>
+
     // const title = post.frontmatter.title
     // const description = post.frontmatter.description ? post.frontmatter.description : post.excerpt
     // const image = post.frontmatter.socialImage
@@ -64,12 +69,12 @@ export default LearnPage
 export const getStaticPaths: GetStaticPaths = async () => {
     const allSlugs = await getAllSlugs()
 
-    console.log("# allSlugs", allSlugs)
+    console.log("# allSlugs", allSlugs?.records['learn']?.contentDirectory, allSlugs?.records['learn']?.recordSlugs)
 
     if (!allSlugs) {
         return { paths: [{ params: { slug: ['404'] } }], fallback: false }
     }
-    const slugs = Object.keys(allSlugs.records.podcast.recordSlugs)
+    const slugs = Object.keys(allSlugs.records.learn.recordSlugs)
     const paths = slugs.map(slug => ({ params: { slug: slug.split('/') } }))
 
     return {
