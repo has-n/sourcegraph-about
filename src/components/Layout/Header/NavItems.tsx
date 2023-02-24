@@ -53,6 +53,7 @@ const NAV_ITEMS: NavItem[] = EXP_SOURCEGRAPH_ENTERPRISE
               name: 'Search public code',
               href: 'https://sourcegraph.com',
           },
+          ...(EXP_FEATURES_DROPDOWN ? [{ name: 'Docs', href: 'https://docs.sourcegraph.com' }] : []),
           { name: 'Blog', href: '/blog' },
       ]
     : [
