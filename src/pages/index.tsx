@@ -113,7 +113,7 @@ const HomeHero: FunctionComponent = () => (
                 {EXP_GET_STARTED ? (
                     <>
                         <Heading size="h6" className="mb-1 text-sm text-white/75">
-                            Get started:
+                            Get started (TODO: this will emphasize App):
                         </Heading>
                         <GetStartedButton
                             buttonLocation={buttonLocation.hero}
