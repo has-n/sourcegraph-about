@@ -29,7 +29,7 @@ const NAV_ITEMS: NavItem[] = EXP_SOURCEGRAPH_ENTERPRISE
                     links: [
                         { name: 'Code Search', href: '/code-search' },
                         { name: 'Batch Changes', href: '/batch-changes' },
-                        { name: 'Code Insights', href: '/batch-changes' },
+                        { name: 'Code Insights', href: '/code-insights' },
                     ],
                 }
               : {
